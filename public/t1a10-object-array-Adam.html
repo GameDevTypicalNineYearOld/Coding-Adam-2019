@@ -1,7 +1,7 @@
 <h1 align=center> t1a10-object-array by Adam</h1>
 
 <input type=button value="Show Object Array" onclick="{
-   let myObjectArray = {'age':'17', 'name':'Adam'};
+   let myObjectArray = {name:'Adam', myFavoriteCars:['Subaru 22b', 'Nissan r34']};
 
    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
    document.getElementById('myTextArea01').value = myPrintout
@@ -9,19 +9,27 @@
 }">
 
 <input type=button value="Show Array Object" onclick="{
-   let myArrayObject = {'age':'17', 'name':'Adam', 'height':'190cm'};
+   let myArrayObject = ['Adam', {age:'17', hair:'Brown', eyes:['Green','Grey']}];
 
    let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
    document.getElementById('myTextArea01').value = myPrintout
    document.getElementById('myDiv01').innerHTML = 'bit more detail'
 }">
 
-<input type=button value="My favorite car" onclick="{
-   let myArrayObject = {'age':'21', 'name':'Subaru Impreza 22B STI', 'engine':'Flat four'};
+<input type=button value="22B" onclick="{
+   let myObjectArray = {name:'Subaru Impreza 22B STI', age:'1998', powertrain:['engine type:F4', 'displacement:2.2L', 'power:126hp', 'layout:front engine,all wheel drive']};
 
-   let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
+   let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
    document.getElementById('myTextArea01').value = myPrintout
-   document.getElementById('myDiv01').innerHTML = 'an amazing car'
+   document.getElementById('myDiv01').innerHTML = 'favorite car'
+}">
+
+<input type=button value="r34" onclick="{
+   let myObjectArray = {name:'Nissan Skyline gtr r34', age:'1999-2002', powertrain:['engine type:I6', 'displacement:2.6L', 'power:276hp', 'layout:front engine,all wheel drive']};
+
+   let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+   document.getElementById('myTextArea01').value = myPrintout
+   document.getElementById('myDiv01').innerHTML = '2nd favorite car'
 }">
 
 <div id="myDiv01">...</div><br>
