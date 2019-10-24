@@ -22,13 +22,13 @@ function myHitOther(my1,my2){
 
 
 <img src="myImage06.png"  id="myImage06" style="position:absolute; left:200; top:200; width:100; height:100; " />
-<img src="sonic.png"  id="sonic" style="position:absolute; left:400; top:200; width:100; height:100; " />
+<img src="myImage07.png"  id="myImage07" style="position:absolute; left:400; top:200; width:100; height:100; " />
 
 
 <input type=button value="go Right"  onclick="{
    document.getElementById('myImage06').style.left = 
       parseInt(document.getElementById('myImage06').style.left) + 10
-   if ( myHitOther('myImage06','sonic') ){
+   if ( myHitOther('myImage06','myImage07') ){
        alert('you lose')
       //document.getElementById('myImage06').style.left = '20px'
    }
