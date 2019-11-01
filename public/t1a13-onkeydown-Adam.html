@@ -1,59 +1,26 @@
-<script>
-   let myInterval
-
-function myIsOnScreen(){
-   if (parseInt(document.getElementById('myDiv01').style.left) > 400) {
-   }
-}
-
-</script>
+<img src="myCharacter02.png" id="myCharacter02" style="position:absolute; z-index:+2; left:0px; top:525px; height:200px; width:135px;">
 
 <body onkeydown="{
 
-     let myKey = event.myKey
-//   let myKey = String.toLowerCase(event.hey)
+   if (event.key == 'd') {
+     document.getElementById('myCharacter02').style.left = parseInt(document.getElementById('myCharacter02').style.left) + 10 + 'px'
+   }   // d = go right
 
-  if (myKey == 'd') {
-     clearInterval(myInterval)
-     myInterval = setInterval(function(){
+   if (event.key == 'a') {
+     document.getElementById('myCharacter02').style.left = parseInt(document.getElementById('myCharacter02').style.left) - 10 + 'px'
+   }   // a = go left
 
-        document.getElementById('myDiv01')style.left =
-            parseInt(document.getElementById('myDiv01').style.left) + 3
-        myIsOnScreen()
-     } ,20)
-  }
+   if (event.key == 'w') {
+     document.getElementById('myCharacter02').style.top = parseInt(document.getElementById('myCharacter02').style.top) - 10 + 'px'
+   }   // d = go up
 
-     let myKey = event.myKey
-//   let myKey = String.toLowerCase(event.hey)
+   if (event.key == 's') {
+     document.getElementById('myCharacter02').style.top = parseInt(document.getElementById('myCharacter02').style.top) + 10 + 'px'
+   }   // a = go down
+}">
 
-  if (myKey == 'a') {
-     clearInterval(myInterval)
-     myInterval = setInterval(function(){
+<img src="myImage06.png" id="myImage06" style="position:absolute; z-index:+1; left:0px; top:0px; height:755px; width:1600px;">
 
-        document.getElementById('myDiv01')style.left =
-            parseInt(document.getElementById('myDiv01').style.left) - 3
-        myIsOnScreen()
-     } ,20)
-  }
-
-     let myKey = event.myKey
-//   let myKey = String.toLowerCase(event.hey)
-
-  if (myKey == 'w') {
-     clearInterval(myInterval)
-     myInterval = setInterval(function(){
-
-        document.getElementById('myDiv01')style.top =
-            parseInt(document.getElementById('myDiv01').style.top) + 3
-        myIsOnScreen()
-     } ,20)
-  }
-
-     let myKey = event.myKey
-//   let myKey = String.toLowerCase(event.hey)
-
-  if (myKey == 's') {
-     clearInterval(myInterval)
      myInterval = setInterval(function(){
 
         document.getElementById('myDiv01')style.top =
