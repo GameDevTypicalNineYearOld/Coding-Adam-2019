@@ -1,0 +1,33 @@
+<h2 align=center>Javascript Classes t2a03-classes-new-Adam</h2>
+<input type=text id="myText01" placeholder="Bearded Dragon"
+value="">
+
+<input id=""myButton01" type="button" value="Summon Bearded Dragon"
+onclick="{
+ class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv01').innerHTML = 'This is  '+ this.myName + '. She is ' + this.myAge + ' years old<br>'
+     }
+  }  // end class myAnimal
+    myDragon = new myAnimal('LeatherBack', 5)
+    myDragon.myShow()
+}"><br><br>
+<div id='myDiv01'>...</div><br>
+
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+<input type="button" value="Use ResponsiveCode" onclick="{
+    responsiveVoice.speak('Snake, snake, snake, snake, snake, snake, snake,  SAKE')
+
+}"><br><br>
+
+
+<input type="button" value="initialize speak" onclick="{
+    responsiveVoice.speak('Leather Back will glass this mortal 
+planet', 'US English Female',
+{pitch: 1, rate" 1 volume " 1})
+}"><br><br>
