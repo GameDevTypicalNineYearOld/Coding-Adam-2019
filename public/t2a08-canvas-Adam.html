@@ -1,1 +1,182 @@
+<input type=button value="B" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(100,300);
+   myContext.lineTo(400,100);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(1000,300);
+   myContext.lineTo(700,100);
+   myContext.stroke();
 
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(100,300);
+   myContext.lineTo(50,500);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(1000,300);
+   myContext.lineTo(1050,500);
+   myContext.stroke();
+
+}">
+
+<input type=button value="A" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(400,100);
+   myContext.lineTo(350,300);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(700,100);
+   myContext.lineTo(750,300);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(50,500);
+   myContext.lineTo(200,475);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(1050,500);
+   myContext.lineTo(900,475);
+   myContext.stroke();
+
+}">
+
+<input type=button value="T" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(350,300);
+   myContext.lineTo(450,250);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(750,300);
+   myContext.lineTo(650,250);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(200,475);
+   myContext.lineTo(300,550);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(900,475);
+   myContext.lineTo(800,550);
+   myContext.stroke();
+
+}">
+
+<input type=button value="M" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(450,250);
+   myContext.lineTo(500,200);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(650,250);
+   myContext.lineTo(600,200);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(300,550);
+   myContext.lineTo(400,525);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(800,550);
+   myContext.lineTo(700,525);
+   myContext.stroke();
+
+}">
+
+<input type=button value="A" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(500,200);
+   myContext.lineTo(500,110);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(600,200);
+   myContext.lineTo(600,110);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(400,525);
+   myContext.lineTo(500,600);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(700,525);
+   myContext.lineTo(600,600);
+   myContext.stroke();
+
+}">
+
+<input type=button value="N" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(500,110);
+   myContext.lineTo(550,150);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(600,110);
+   myContext.lineTo(550,150);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(500,600);
+   myContext.lineTo(550,700);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(600,600);
+   myContext.lineTo(550,700);
+   myContext.stroke();
+
+}">
+
+<input type=button value=".fillText('Very Wow', 700, 100)" onclick="{
+
+   myContext.font = '100px Arial';
+   myContext.fillText('Much Wow', 700, 100);
+
+   myContext.translate(400, 100);  // move rotation point from 0,0
+   myContext.rotate(60 * Math.PI / 180); // 60 in degrees
+
+   myContext.fillText('Very Space', 87, 45);
+   myContext.stroke();
+
+  // reset
+   myContext.resetTransform();  // move rotation point from 0,0
+   //myContext.rotate(60 * Math.PI / 180); // 60 in degrees
+}">
+
+
+<input type=button value="Clear all" onclick="{
+   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}">
+
+
+<br><br>
+
+<canvas id="myCoolTag" width="1500" height="900" style="border:5px solid #000000;"></canvas>
+
+<script>
+   // set up global variables
+   let myCanvas=document.getElementById('myCoolTag');
+   let myContext=myCanvas.getContext('2d');
+
+</script>
