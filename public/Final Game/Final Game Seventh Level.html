@@ -1,0 +1,67 @@
+<img src="myGif06.gif" id="myGif06" style="position:absolute; z-index:-10; left:0px; top:0px; height:757px; width:1600px;">
+
+<script>
+function myCheckCollisions(){
+   if (myHitOther('myCharacter02','myImage08')){document.getElementById('myCharacter02').style.left = parseInt(document.getElementById('myCharacter02').style.left) + 5 + 'px'}
+   //document.getElementById('myCharacter02').style.top = parseInt(document.getElementById('myCharacter02').style.top) + 5 + 'px'
+   if (myHitOther('myCharacter02','myImage8')){document.getElementById('myCharacter02').style.left = parseInt(document.getElementById('myCharacter02').style.left) - 5 + 'px'}
+   //document.getElementById('myCharacter02').style.top = parseInt(document.getElementById('myCharacter02').style.top) + 5 + 'px'
+}
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+
+
+var myLooping = 0
+let myAdam = true
+
+
+
+</script>
+
+
+
+
+<img src="myCharacter02.png" id="myCharacter02" style="position:absolute; z-index:+2; left:300px; top:450px; height:300px; width:202.5px;">
+
+<img src="myImage08.png" id="myImage08" style="position:absolute; z-index:+3; left:0px; top:500px; height:200px; width:0px;">
+
+<img src="myImage08.png" id="myImage8" style="position:absolute; z-index:+3; left:1599px; top:500px; height:200px; width:0px;">
+
+<img src="myImagetext01.png" id="myImagetext01" style="position:absolute; z-index:+3; left:0px; top:0px; height:100px; width:300px;">
+
+<img src="myImagetext05.png" id="myImagetext05" style="position:absolute; z-index:+3; left:1000px; top:-700px; height:100px; width:300px;">
+
+<body onkeydown="{
+
+   if (event.key == 'd') {
+     document.getElementById('myCharacter02').style.left = parseInt(document.getElementById('myCharacter02').style.left) + 5 + 'px'
+   }   // d = go right
+
+   if (event.key == 'p') {location='Final Game Eighth Level.html'}
+
+   if (event.key == 'a') {
+     document.getElementById('myCharacter02').style.left = parseInt(document.getElementById('myCharacter02').style.left) - 5 + 'px'
+   }   // a = go left
+
+   if (event.key == 't' && myAdam) {
+     document.getElementById('myImagetext05').style.top = parseInt(document.getElementById('myImagetext05').style.top) + 900 + 'px'
+      myAdam = false
+   }   // a = go down
+  
+   myCheckCollisions()
+}">
